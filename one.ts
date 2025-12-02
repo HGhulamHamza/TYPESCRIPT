@@ -51,8 +51,16 @@ if (typeof h=="string")
 
 //VOID
 
-function abcd(): void{
+function abc(): void{
        console.log("Ye coid fucntion ha kuch return nahi kar raha ha !")
 }
 
+
+//Type Inference : jab ap variable ko na bataye k type kia ha 
+
+let w=12;   // ab pata nahi ha k w ka kia type ha 
+
+//Type annotation 
+
+let d:number | boolean | string // ab ye d number b ho sakta ha boolean b ho sakta ha or string b
 
