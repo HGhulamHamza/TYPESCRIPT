@@ -73,7 +73,7 @@ let n=new Example("Hamza");
 class Bottle{
     // private name ="Milton"
     protected name ="Milton"   // laikn "protected" karne pe error b nahi dega
-    
+
 }
 class MetalBottle extends Bottle{
     public material ="metal"
@@ -88,6 +88,53 @@ let b1= new MetalBottle ();
 b1.changeName()
 
 
+//2:22:10
+
+
+class User{
+    constructor(public name:string, public age:number,public gender?:string){}   //is "?" ne gender k attribute ko optional kardia warna pehle agar user gender na deta to error ata
+
+}
+let user1=new User("hamza",21,"Male")
+let user2=new User("Haq",22)
+
+
+
+//GETTERS   and     SETTERS
+// class Admi{
+//     constructor(public name:string, public age:number ){}
+     
+
+//     getName(){               //Getter
+//         return this.name;
+//     }
+
+//     setName(value:string){           //Setter
+//                this.name=value;
+//     }
+// }
+
+// let admi=new Admi("hamza",22)
+
+
+//BUT IN TS
+class Admi{
+    constructor(public _name:string, public age:number ){}
+     
+
+    get name(){               //Getter
+        return this._name;
+    }
+
+     set name(value:string){    //Setter
+        this._name=value;
+     }
+}
+
+let admi=new Admi("hamza",22)
+
+
+//2:34:20
 
 
 

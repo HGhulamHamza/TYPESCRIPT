@@ -83,3 +83,39 @@ class MetalBottle extends Bottle {
 }
 let b1 = new MetalBottle();
 b1.changeName();
+//2:22:10
+class User {
+    constructor(name, age, gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    } //is "?" ne gender k attribute ko optional kardia warna pehle agar user gender na deta to error ata
+}
+let user1 = new User("hamza", 21, "Male");
+let user2 = new User("Haq", 22);
+//GETTERS   and     SETTERS
+// class Admi{
+//     constructor(public name:string, public age:number ){}
+//     getName(){               //Getter
+//         return this.name;
+//     }
+//     setName(value:string){           //Setter
+//                this.name=value;
+//     }
+// }
+// let admi=new Admi("hamza",22)
+//BUT IN TS
+class Admi {
+    constructor(_name, age) {
+        this._name = _name;
+        this.age = age;
+    }
+    get name() {
+        return this._name;
+    }
+    set name(value) {
+        this._name = value;
+    }
+}
+let admi = new Admi("hamza", 22);
+//2:34:20
