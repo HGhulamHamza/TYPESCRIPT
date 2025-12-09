@@ -52,6 +52,40 @@ let m2=new Music("kali kali zulfo","NFAK","",1200,false)
 
 
 //ACCESS MODIFIERS
+//public private protected
+//public : uski value ko agar constructor ma change karo to koi problem nahi ha 
+        // uski value ko constructor k andar kc method ma change karo to koi problem nai
+        //class ma inherit karlo us k bad change karlo tab b koi problem nahi
+
+//private : sirf aoni class ma accessable ha        
+class Example{
+    constructor(private name:string){
+
+    }
+}
+let n=new Example("Hamza");
+// n.name="Abbass"     error de raha ha k change nahi ho sakta laikn TS phr b usay run kar k name change kardega   
+
+
+//private sirf us class ma use ho sakta
+//protected apni class ma b use ho sakta ha aur jo class usay extend karegi usme b use ho sakta ha 
+
+class Bottle{
+    // private name ="Milton"
+    protected name ="Milton"   // laikn "protected" karne pe error b nahi dega
+    
+}
+class MetalBottle extends Bottle{
+    public material ="metal"
+
+    changeName(){
+        this.name="NewName"      //erorr becuase name is private and we are changing it
+    }
+}
+
+
+let b1= new MetalBottle ();
+b1.changeName()
 
 
 
