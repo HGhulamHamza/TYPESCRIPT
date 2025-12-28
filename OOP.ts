@@ -91,12 +91,12 @@ b1.changeName()
 //2:22:10
 
 
-class User{
-    constructor(public name:string, public age:number,public gender?:string){}   //is "?" ne gender k attribute ko optional kardia warna pehle agar user gender na deta to error ata
+// class User{
+//     constructor(public name:string, public age:number,public gender?:string){}   //is "?" ne gender k attribute ko optional kardia warna pehle agar user gender na deta to error ata
 
-}
-let user1=new User("hamza",21,"Male")
-let user2=new User("Haq",22)
+// }
+// let user1=new User("hamza",21,"Male")
+// let user2=new User("Haq",22)
 
 
 
@@ -135,6 +135,33 @@ let admi=new Admi("hamza",22)
 
 
 //2:34:20
+
+//STATIC MEMBERS
+//"new" ka instance banaye hi access kar sakte hain value ko agar ham 
+// "static" ka word use karle to
+
+class Hamza{
+    static version=1.0
+}
+
+//ABSTRACT CLASSES   (Chupa huwa)
+class Cooking{
+    constructor(protected gas:number, public gassName:string){
+
+    }
+    }
+class Vegetables extends Cooking{
+
+}    
+
+class Burger extends Cooking{
+
+}
+
+
+
+
+
 
 
 

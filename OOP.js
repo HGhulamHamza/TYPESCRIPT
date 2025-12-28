@@ -84,15 +84,11 @@ class MetalBottle extends Bottle {
 let b1 = new MetalBottle();
 b1.changeName();
 //2:22:10
-class User {
-    constructor(name, age, gender) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-    } //is "?" ne gender k attribute ko optional kardia warna pehle agar user gender na deta to error ata
-}
-let user1 = new User("hamza", 21, "Male");
-let user2 = new User("Haq", 22);
+// class User{
+//     constructor(public name:string, public age:number,public gender?:string){}   //is "?" ne gender k attribute ko optional kardia warna pehle agar user gender na deta to error ata
+// }
+// let user1=new User("hamza",21,"Male")
+// let user2=new User("Haq",22)
 //GETTERS   and     SETTERS
 // class Admi{
 //     constructor(public name:string, public age:number ){}
@@ -119,3 +115,20 @@ class Admi {
 }
 let admi = new Admi("hamza", 22);
 //2:34:20
+//STATIC MEMBERS
+//"new" ka instance banaye hi access kar sakte hain value ko agar ham 
+// "static" ka word use karle to
+class Hamza {
+}
+Hamza.version = 1.0;
+//ABSTRACT CLASSES   (Chupa huwa)
+class Cooking {
+    constructor(gas, gassName) {
+        this.gas = gas;
+        this.gassName = gassName;
+    }
+}
+class Vegetables extends Cooking {
+}
+class Burger extends Cooking {
+}
